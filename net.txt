@@ -1,0 +1,8 @@
+create database net;
+use net;
+create table student ( id int, name varchar(50) not null);
+create table users ( email varchar (50) unique);
+create table employee(empid int primary key ,empname varchar(50));
+create table departments ( deptid int primary key , deptname varchar(30));
+create table staff(staffid int primary key,deptid int,foreign key (deptid) references departments(deptid));
+desc staff;
